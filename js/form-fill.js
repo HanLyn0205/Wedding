@@ -30,7 +30,7 @@ document.getElementById('message-form').addEventListener('submit', function(e) {
         message: message
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbxaQqjS9W8HZAm1M8v1x05-o5aDSl2I9sb8zNx_s8b1gIBkX520u4Jf9v8JaAmbHmIl/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyKYq3Ud8jikK-g1x8eBhS2k_25ot6kmTGPiVBjByYudQv3TP8vfW4mjoywNX0tND0f/exec", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify(formData),
