@@ -1,15 +1,18 @@
 // Gallery images array
+// const galleryImages = [
+//     'img/HMP01116.jpg',
+//     'img/HMP00546.jpg',
+//     'img/HMP00709.jpg',
+//     'img/HMP00867.jpg',
+//     'img/HMP01158.jpg',
+//     'img/HMP01324.jpg',
+//     'img/HMP01384.jpg',
+//     'img/HMP01457.jpg'
+// ];
 const galleryImages = [
-    'img/HMP01116.jpg',
-    'img/HMP00546.jpg',
-    'img/HMP00709.jpg',
-    'img/HMP00867.jpg',
-    'img/HMP01158.jpg',
-    'img/HMP01324.jpg',
     'img/HMP01384.jpg',
     'img/HMP01457.jpg'
 ];
-
 // Function to create gallery items
 function createGalleryItem(imagePath) {
     const col = document.createElement('div');
