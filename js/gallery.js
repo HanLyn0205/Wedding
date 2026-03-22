@@ -1,22 +1,15 @@
-// Gallery images array
-// const galleryImages = [
-//     'img/HMP01116.jpg',
-//     'img/HMP00546.jpg',
-//     'img/HMP00709.jpg',
-//     'img/HMP00867.jpg',
-//     'img/HMP01158.jpg',
-//     'img/HMP01324.jpg',
-//     'img/HMP01384.jpg',
-//     'img/HMP01457.jpg'
-// ];
 const galleryImages = [
-    'img/HMP01384.jpg',
-    'img/HMP01457.jpg'
+        'img/LOGD4223.JPG',
+        'img/LOGD4161.JPG',
+        'img/LOGD4437.JPG',
+        'img/LOGD4819.JPG',
+        'img/LOGD5172.JPG',
+        'img/LOGD5382.JPG',
 ];
 // Function to create gallery items
 function createGalleryItem(imagePath) {
     const col = document.createElement('div');
-    col.className = 'col-lg-3 col-md-4 col-sm-6 wow fadeInUp';
+    col.className = 'col-lg-3 col-md-6 col-sm-6 wow fadeInUp';
     
     const galleryItem = document.createElement('div');
     galleryItem.className = 'gallery-item';

@@ -66,7 +66,7 @@
 }
 
 .popup-header h2 {
-    color: #fd5d5d;
+    color: #066d68;`
     margin-bottom: 5px;
     font-family: 'Roboto', sans-serif;
 }
@@ -96,7 +96,7 @@
     text-align: center;
     padding: 15px;
     border-radius: 8px;
-    background-color: #81A6C6;
+    background-color: #f8f7f4;
     font-family: 'Roboto', sans-serif;
     width: 100%;
     box-sizing: border-box;
@@ -140,7 +140,7 @@
 
 .action-btn {
     background-color: #81A6C6;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 6px 12px;
     border-radius: 5px;

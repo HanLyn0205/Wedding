@@ -1,12 +1,11 @@
 #weddingWishes  {
-    background-color: #f8f7f4; /* Light gray background */
     padding: 40px 0; /* Add vertical padding for spacing */
 }
 
 .form-container {
     width: 100%;
     max-width: 600px;
-    background-color: #e6d7e6;
+    background-color: #f8f7f4;
     border-radius: 6px;
     padding: 5%;
     margin: 0 auto;
@@ -79,12 +78,13 @@ select {
 }
 
 .submit-button {
-    background-color: #a18ba1;
+    background-color: #fefdfa;
     padding: 10px;
-    color: white;
-    border: none;
+    color: rgb(0, 0, 0);
+    border: 0.5;
+    border-color: #fefdfa;
     font-size: 18px;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     width: 80%;
     max-width: 500px;
@@ -95,7 +95,7 @@ select {
 }
 
 .submit-button:hover {
-    background-color: #8a788a;
+    background-color: #f8f7f4;
 }
 
 /* Custom Alert Styles */
@@ -105,8 +105,7 @@ select {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #e6d7e6;
-    color: #333;
+    background-color: #f8f7f4;
     padding: 15px 30px;
     border-radius: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -114,17 +113,17 @@ select {
     font-family: Arial, sans-serif;
     text-align: center;
     animation: slideDown 0.5s ease-out;
-    border: 2px solid #a18ba1;
+    border: 2px solid #f8f7f4;
 }
 
 .custom-alert.success {
-    background-color: #e6d7e6;
-    border-color: #a18ba1;
+    background-color: #f8f7f4;
+    border-color: #f8f7f4;
 }
 
 .custom-alert.error {
-    background-color: #ffe6e6;
-    border-color: #ff9999;
+    background-color: #f8f7f4;
+    border-color: #f8f7f4;
 }
 
 @keyframes slideDown {
@@ -147,6 +146,6 @@ select {
 }
 
 .thank_text span {
-    color: #ff9999;
+    color: #f8f7f4;
     font-weight: bold;
 }
