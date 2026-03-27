@@ -17,20 +17,25 @@ document.getElementById('message-form').addEventListener('submit', function(e) {
     const name = document.getElementById('name').value;
     const relationship = document.getElementById('relationship').value;
     const message = document.getElementById('message').value;
-    
+    const responsed = document.getElementById('responsed').value;
+    const participant = document.getElementById('participant').value;
+
     // Basic validation
-    if (!name || !relationship || !message) {
+    if (!name || !relationship || !message || !responsed || !participant) {
         showCustomAlert('Vui lòng điền đầy đủ thông tin!', 'error');
         return;
     }
 
+
     const formData = {
         name: name,
         relationship: relationship,
+        responsed: responsed,
+        participant: participant,
         message: message
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbyKYq3Ud8jikK-g1x8eBhS2k_25ot6kmTGPiVBjByYudQv3TP8vfW4mjoywNX0tND0f/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzc24myamp3iaOEdQPO2C2kThXEX23EXq4KCuc-YmYFYTC20nX9CMI6wTECxo1RuJQ/exec", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify(formData),

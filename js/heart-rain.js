@@ -6,7 +6,11 @@ class Heart {
         this.element.style.fontSize = Math.random() * 20 + 10 + 'px';
         this.element.style.left = Math.random() * 100 + 'vw';
         this.element.style.top = '-20px';
-        this.element.style.color = `hsl(${Math.random() * 60 + 330}, 100%, 50%)`; // Pink to red colors
+        this.element.style.color = `hsl(
+                                    ${Math.random() * 20 + 165},  /* hue: xanh ngọc */
+                                    ${Math.random() * 25 + 65}%,  /* saturation: dịu */
+                                    ${Math.random() * 25 + 65}%   /* lightness: pastel */
+                                    )`;
         this.element.style.opacity = Math.random() * 0.5 + 0.5;
         this.element.style.pointerEvents = 'none';
         this.element.style.zIndex = '9999';

@@ -142,7 +142,16 @@ select {
 }
 
 .thank_text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.thank_text_1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    line-height: 1.8;
+    word-break: break-word;
 }
 
 .thank_text span {

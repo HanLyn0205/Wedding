@@ -62,7 +62,7 @@
 .display-4,
 .display-5,
 .display-6 {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Great Vibes', cursive !important;
     font-weight: 700;
 }
 
@@ -120,6 +120,7 @@
 .navbar .navbar-nav .nav-link.active,
 .sticky-top.bg-white .navbar .navbar-nav .nav-link:hover,
 .sticky-top.bg-white .navbar .navbar-nav .nav-link.active {
+    background-color: #066d68;
     color: #f8f7f4;
 }
 
@@ -160,40 +161,55 @@
     text-align: center;
 }
 
-/* Nút next/prev */
+/* Nút bình thường */
 .carousel-control-prev,
 .carousel-control-next {
-    opacity: 0;
-    background-color: rgba(248,239,171, 0.7);
+    background-color: #f8f7f4;   /* nền sáng */
+    color: #066d68;              /* icon xanh */
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
+
     top: 50%;
     transform: translateY(-50%);
-}
-#carouselId .carousel-indicators li {
-    border-top: 10px solid var(--bs-white);
-    border-bottom: 10px solid var(--bs-white);
-    border-right: 5px solid var(--bs-white);
-    border-left: 5px solid var(--bs-white);
-    margin-right: 10px;
-    transition: 0.5s;
-    border-radius: 7px;
+    transition: all 0.3s ease;
 }
 
-#carouselId .carousel-indicators li.active {
-    background: #E3BDB0;
-    border-color: #E3BDB0;
-    border-right: 15px solid #E3BDB0;
-    border-left: 15px solid #E3BDB0;
-    border-radius: 7px;
+/* Icon kế thừa màu */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(30%) saturate(800%) hue-rotate(130deg);
 }
 
-.carousel:hover .carousel-control-prev,
-.carousel:hover .carousel-control-next {
-    opacity: 1;
+/* Hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #066d68;
+    color: #f8f7f4;
 }
 
+/* Active (click) */
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    background-color: #066d68;
+    color: #f8f7f4;
+}
+
+/* Icon đổi màu khi hover + active */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon,
+.carousel-control-prev:active .carousel-control-prev-icon,
+.carousel-control-next:active .carousel-control-next-icon {
+    filter: brightness(0) invert(1); /* trắng */
+}
+
+/* Remove viền xanh bootstrap */
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    outline: none;
+    box-shadow: none;
+}
 /* Mobile fix riêng ảnh cuối */
 @media (max-width: 768px) {
     #carousel-item-3 img {
@@ -212,11 +228,11 @@
     width: 30px;
     height: 4px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.5);
+    background: #066d68;
 }
 
 .carousel-indicators .active {
-    background: #E3BDB0;
+    background: #066d68;
 }
 /*** Carousel End ***/
 
@@ -316,7 +332,7 @@
     padding: 40px 0; /* Add vertical padding for spacing */
 }
 #weddingGift  {
-    background-color: #color: #066d68;;; /* Light gray background */
+    background-color:#f8f7f4; /* Light gray background */
     padding: 40px 0; /* Add vertical padding for spacing */
 }
 
@@ -352,7 +368,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: #f8f7f4;
     z-index: -1;
 }
 
@@ -672,8 +688,7 @@ transform: scale(0.98);
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--bs-dark);
-    line-height: 1.6;
+    font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -696,7 +711,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #f8f7f4;
+    background-color: #f8f7f4;   /* nền sáng */
+    color: #066d68;   
     border: none;
     display: flex;
     align-items: center;
@@ -709,7 +725,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu-toggle:hover {
-    background-color: #cef5f2;
+    background-color: #066d68;
+    color: #f8f7f4;
 }
 
 #menuIcon, #closeIcon {
@@ -778,7 +795,7 @@ h1, h2, h3, h4, h5, h6 {
 .menu-text {
     position: absolute;
     right: 50px;
-    background-color: #cef5f2;
+    background-color: #f8f7f4;
     color: black;
     padding: 5px 10px;
     border-radius: 5px;
@@ -970,8 +987,11 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 30px;
     z-index: 1000;
     display: flex;
+    border-radius: 0 40px 40px 0;
     flex-direction: row;
     align-items: center;
+    background-color: #f8f7f4;   /* nền sáng */
+    color: #066d68;   
 }
 
 .music-player-toggle {
@@ -979,13 +999,16 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     padding: 0 20px 0 50px;
     border-radius: 0 40px 40px 0;
-    background-color: #f8f7f4;
+    background-color: #f8f7f4;   /* nền sáng */
+    color: #066d68;   
     border: none;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 2;
+    display: inline-flex;   /* 👈 không kéo full chiều ngang */
+
 }
    
 .music-player-toggle::before {
@@ -996,30 +1019,49 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-50%);
     width: 70px;
     height: 70px;
-    background-color: #f8f7f5;
+    background-color: #f8f7f4;   /* nền sáng */
+    color: #066d68; 
     border-radius: 50%;
     z-index: -1;
     transition: all 0.3s ease;
 }
 
-#musicIcon, #pauseIcon {
+/* ICON */
+#musicIcon,
+#pauseIcon {
     position: absolute;
-    left: -1px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 20px;
-    color: black;
-    transition: all 0.3s ease;
-    width: 40px;
-    text-align: center;
-}
 
+    width: 40px;
+    height: 40px;              /* 👈 FIX khoảng trắng */
+    line-height: 40px;         /* 👈 căn giữa icon */
+
+    text-align: center;
+    font-size: 18px;
+
+    background-color: #f8f7f4;
+    color: #066d68;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
 .music-text {
     font-size: 16px;
-    font-weight: 500;
-    color: black;
+    font-weight: 1000;
+    color: #066d68;
     white-space: nowrap;
+    transition: all 0.1s ease;
+   
 }
+/* HOVER → nên hover vào button cha */
+.music-player-toggle:hover #musicIcon,
+.music-player-toggle:hover #pauseIcon,
+.music-player-toggle:hover .music-text  {
+    background-color: #066d68;
+    color: #f8f7f4;
+}
+
 
 #pauseIcon {
     display: none;
@@ -1034,11 +1076,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .music-player-toggle:hover {
-    background-color: #cef5f2;
+    background-color: #066d68;
+    color: #f8f7f4;
 }
 
 .music-player-toggle:hover::before {
-    background-color: #cef5f2;
+    background-color: #066d68;
+    color: #f8f7f4;
 }
 
 .music-player-toggle.active {
